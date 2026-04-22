@@ -1,0 +1,10 @@
+services:
+  qiskit-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quantum
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python3 bell_state.py
